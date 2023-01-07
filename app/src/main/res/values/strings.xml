@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">cathay-test</string>
+    <string name="app_name">TaipeiTour</string>
+    <string name="unkown_error">Unknown Error</string>
+    <string name="menu_change_locale">Change Language</string>
+    <string name="lastUpdate">Last Updated Time：</string>
+    <string name="openTime">Open Time：</string>
+    <string name="address">Address：</string>
 </resources>

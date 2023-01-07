@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/attractions">
+
+    <fragment
+        android:id="@+id/attractions"
+        android:name="com.tonynowater.cathaytest.feature.attractions.AttractionsFragment"
+        tools:layout="@layout/fragment_attractions">
+        <action
+            android:id="@+id/attractions_to_attraction_detail"
+            app:destination="@id/attraction_detail">
+            <argument
+                android:name="id"
+                app:argType="integer" />
+            <argument
+                android:name="title"
+                app:argType="string" />
+        </action>
+
+        <action
+            android:id="@+id/attractions_to_locale_picker"
+            app:destination="@id/language_picker" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/attraction_detail"
+        android:name="com.tonynowater.cathaytest.feature.attraction_detail.AttractionDetailFragment"
+        tools:layout="@layout/fragment_attraction_detail">
+        <argument
+            android:name="id"
+            app:argType="integer" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+
+        <action
+            android:id="@+id/to_web_view"
+            app:destination="@id/web_view">
+            <argument
+                android:name="title"
+                app:argType="string" />
+            <argument
+                android:name="web_url"
+                app:argType="string" />
+        </action>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/web_view"
+        android:name="com.tonynowater.cathaytest.feature.web.WebViewFragment">
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="web_url"
+            app:argType="string" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/language_picker"
+        android:name="com.tonynowater.cathaytest.feature.language.LanguagePickerDialogFragment"
+        tools:layout="@layout/dialog_fragment_language_picker" />
+
+</navigation>

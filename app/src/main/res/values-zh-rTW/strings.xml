@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">台北旅遊資訊</string>
+    <string name="unkown_error">未知錯誤</string>
+    <string name="menu_change_locale">切換語系</string>
+    <string name="lastUpdate">最後更新時間：</string>
+    <string name="openTime">營業時間：</string>
+    <string name="address">地址：</string>
+</resources>
